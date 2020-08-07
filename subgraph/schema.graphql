@@ -28,12 +28,21 @@ type Account @entity
 	balancesLatest:               [LatestBalance!]! @derivedFrom(field: "account")
 }
 
+type Contract @entity
+{
+	id:                           ID!
+	totalSupply:                  BigDecimal!
+	transfers:                    [Transfer!]! @derivedFrom(field: "contract")
+	balancesHistory:              [Balance!]! @derivedFrom(field: "contract")
+	balancesLatest:               [LatestBalance!]! @derivedFrom(field: "contract")
+}
+
 # ================================== ERC20 ====================================
 type Transfer @entity {
 	id:                           ID!
 	transaction:                  Transaction!
 	timestamp:                    BigInt!
-	contract:                     String!
+	contract:                     Contract!
 	from:                         Account!
 	to:                           Account!
 	value:                        BigDecimal!
@@ -42,8 +51,9 @@ type Transfer @entity {
 type LatestBalance @entity {
 	id:                           ID!
 	account:                      Account!
-	contract:                     String!
+	contract:                     Contract!
 	balance:                      BigDecimal!
+	totalSupply:                  BigDecimal!
 	transaction:                  Transaction!
 	block:                        BigInt!
 }
@@ -51,8 +61,9 @@ type LatestBalance @entity {
 type Balance @entity {
 	id:                           ID!
 	account:                      Account!
-	contract:                     String!
+	contract:                     Contract!
 	balance:                      BigDecimal!
+	totalSupply:                  BigDecimal!
 	transaction:                  Transaction!
 	block:                        BigInt!
 }

@@ -5,6 +5,7 @@ import {
 } from '@graphprotocol/graph-ts'
 
 import {
+	Contract,
 	LatestBalance,
 	Transaction,
 } from '../generated/schema'
@@ -12,6 +13,17 @@ import {
 export function createEventID(event: ethereum.Event): string
 {
 	return event.block.number.toString().concat('-').concat(event.logIndex.toString())
+}
+
+export function fetchContract(address: string): Contract
+{
+	let contract = Contract.load(address)
+	if (contract == null)
+	{
+		contract = new Contract(address)
+		contract.totalSupply = BigDecimal.fromString('0')
+	}
+	return contract as Contract
 }
 
 export function fetchLatest(account: string, contract: string): LatestBalance
