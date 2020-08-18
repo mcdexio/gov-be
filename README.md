@@ -1,6 +1,6 @@
 # gov-be
 
-The governance system backend
+The MCDEX Governance voting system backend.
 
 # Ropsten Testnet (networkID = 3)
 
