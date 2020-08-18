@@ -23,5 +23,5 @@ The governance system backend
 - MCB Token ERC20 address: 0x4e352cf164e64adcbad318c3a1e222e9eba4ce42
 - Uniswap MCB/ETH pool ERC20 address: 0x10cfa744c77f1cb9a77fa418ac4a1b6ec62bcce4
 - Voting contract address (block 10683796): 0xb44a29b5fb1f6dc5730d721a2c12898e1e6c6c31
-- Queries (HTTP): https://api.thegraph.com/subgraphs/name/sulliwane/mcdex-mainnet-subgraph
-- Subscriptions (WS): wss://api.thegraph.com/subgraphs/name/sulliwane/mcdex-mainnet-subgraph
+- Queries (HTTP): https://api.thegraph.com/subgraphs/name/mcdexio/mcdex-vote-mainnet
+- Subscriptions (WS): wss://api.thegraph.com/subgraphs/name/mcdexio/mcdex-vote-mainnet
