@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: mcdexio-vote-protocol
-repository: https://github.com/mcdexio/vote-protocol-subgraph
+repository: https://github.com/mcdexio/gov-be
 schema:
   file: ./schema.graphql
 dataSources:
