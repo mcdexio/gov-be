@@ -2,7 +2,9 @@
 
 The MCDEX Governance voting system backend.
 
-# Ropsten Testnet (networkID = 3)
+# Supported networks
+
+## Ropsten Testnet (networkID = 3)
 
 - MCB Token ERC20 address: 0x03fd756680df74b794134fe174f03e8bb1229936
 - Uniswap MCB/ETH pool ERC20 address: 0x9e99f7d76563a9b087f159d2599478826d9f729d
@@ -10,7 +12,7 @@ The MCDEX Governance voting system backend.
 - Queries (HTTP): https://api.thegraph.com/subgraphs/name/sulliwane/mcdex-ropsten-subgraph
 - Subscriptions (WS): wss://api.thegraph.com/subgraphs/name/sulliwane/mcdex-ropsten-subgraph
 
-# Kovan Testnet (networkID = 42)
+## Kovan Testnet (networkID = 42)
 
 - MCB Token ERC20 address: 0xcb263ab066d982b285d20cec20153d1923e6969d
 - Uniswap MCB/ETH pool ERC20 address: 0x4fb542b239cddca757828ddee53487739f1bcdef
@@ -18,7 +20,7 @@ The MCDEX Governance voting system backend.
 - Queries (HTTP): https://api.thegraph.com/subgraphs/name/sulliwane/mcdex-kovan-subgraph
 - Subscriptions (WS): wss://api.thegraph.com/subgraphs/name/sulliwane/mcdex-kovan-subgraph
 
-# Mainnet (homestead networkID = 1)
+## Mainnet (homestead networkID = 1)
 
 - MCB Token ERC20 address: 0x4e352cf164e64adcbad318c3a1e222e9eba4ce42
 - Uniswap MCB/ETH pool ERC20 address: 0x10cfa744c77f1cb9a77fa418ac4a1b6ec62bcce4
