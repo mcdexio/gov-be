@@ -1,11 +1,6 @@
 import { BigInt, BigDecimal, ethereum } from '@graphprotocol/graph-ts';
 
-import {
-  Contract,
-  LatestBalance,
-  Account,
-  Transaction,
-} from '../generated/schema';
+import { Contract, LatestBalance, Transaction } from '../generated/schema';
 
 export function createEventID(event: ethereum.Event): string {
   return event.block.number

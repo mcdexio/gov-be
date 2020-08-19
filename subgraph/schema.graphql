@@ -70,7 +70,7 @@ type Proposal implements Event @entity {
   id: ID!
   transaction: Transaction!
   timestamp: BigInt!
-  # proposer:                     Account!
+  proposer: Account!
   link: String!
   beginBlock: BigInt!
   endBlock: BigInt!
