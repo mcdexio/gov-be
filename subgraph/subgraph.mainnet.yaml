@@ -50,6 +50,29 @@ dataSources:
           handler: handleTransfer
       file: ./src/ERC20.ts
 
+  - name: UniswapMCBUSDC
+    kind: ethereum/contract
+    network: mainnet
+    source:
+      address: '0x4c508567eaEA699f61483C933184d351e7ECb862'
+      abi: IERC20
+      startBlock: 10886275
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Account
+        - Balance
+        - Transfer
+      abis:
+        - name: IERC20
+          file: abi/IERC20.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/ERC20.ts
+
   - name: VoteBox
     kind: ethereum/contract
     network: mainnet

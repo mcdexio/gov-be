@@ -9,9 +9,9 @@ dataSources:
     kind: ethereum/contract
     network: ropsten
     source:
-      address: '0x03fD756680dF74b794134FE174f03e8bb1229936'
+      address: '0x2745E44ff56502A29fCA4386a3f5565AeD02B91b'
       abi: IERC20
-      startBlock: 8449771
+      startBlock: 8501320
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -32,9 +32,32 @@ dataSources:
     kind: ethereum/contract
     network: ropsten
     source:
-      address: '0x9E99f7D76563a9b087f159d2599478826d9f729D'
+      address: '0x92d21865f16e00a54f7face0de5157c31b61d526'
       abi: IERC20
-      startBlock: 8450120
+      startBlock: 8501595
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Account
+        - Balance
+        - Transfer
+      abis:
+        - name: IERC20
+          file: abi/IERC20.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/ERC20.ts
+
+  - name: UniswapMCBDAI
+    kind: ethereum/contract
+    network: ropsten
+    source:
+      address: '0x4630d59CAA4E40b47851C7033e95C28231e71BD7'
+      abi: IERC20
+      startBlock: 9494455
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -55,9 +78,9 @@ dataSources:
     kind: ethereum/contract
     network: ropsten
     source:
-      address: '0x79a367A7045d359765f9CdE9424304c85b9F7A25'
+      address: '0x27C7FF19F32a354A7Cc2a1873063DF5026Cd51F6'
       abi: VoteBox
-      startBlock: 8449797
+      startBlock: 9494980
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
